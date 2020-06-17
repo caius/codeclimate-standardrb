@@ -28,12 +28,14 @@ GEM
     standardrb (1.0.0)
       standard
     unicode-display_width (1.7.0)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   standardrb
+  zeitwerk
 
 BUNDLED WITH
    2.1.4
