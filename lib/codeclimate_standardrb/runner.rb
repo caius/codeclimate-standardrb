@@ -6,7 +6,7 @@ module CodeclimateStandardrb
     attr_reader :standard_runner
 
     def initialize
-      @standard_runner = Standard::Cli.new(["--format=json", "/code"])
+      @standard_runner = Standard::Cli.new(["--format=CodeclimateStandardrb::Formatter", "/code"])
     end
 
     def run
