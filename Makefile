@@ -9,8 +9,8 @@ image: ## Build the image
 	docker build --rm --force-rm --tag $(IMAGE_NAME) .
 
 .PHONY: run
-run: image ## Run the container against ./code
-	docker run --rm --volume code:/code $(IMAGE_NAME)
+run: ## Run the container against ./code
+	docker run --rm --mount type=bind,source="`pwd`/code",target=/code,readonly $(IMAGE_NAME)
 
 .PHONY: help
 help: ## Output help
