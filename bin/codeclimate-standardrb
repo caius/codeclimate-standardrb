@@ -1,3 +1,10 @@
 #!/usr/bin/env ruby
 
-puts "hi"
+# Put lib/ in our load path
+require "pathname"
+$LOAD_PATH << Pathname.new(__dir__).join("..", "lib").expand_path.to_s
+
+require "bundler/setup"
+require "codeclimate_standardrb"
+
+exit CodeclimateStandardrb::Runner.new.run
